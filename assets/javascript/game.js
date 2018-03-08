@@ -12,12 +12,7 @@ var computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.len
 
 document.onkeyup = function (e) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
- 
     lettersGuessed.push(userGuess);
-    
-    
-
 
     if (guessesLeft > 0) {
     
@@ -30,8 +25,7 @@ document.onkeyup = function (e) {
         alert("YOU WIN!!!!");
 
     }
-    if (userGuess !== computerGuess) {
-        
+    if (userGuess !== computerGuess) { 
         guessesLeft--;
     }
     if (guessesLeft === 0) {
@@ -43,10 +37,8 @@ document.onkeyup = function (e) {
 
     }
     console.log(computerGuess);
-
+    console.log(lettersGuessed.toString());
 }
-
-
     var html = "<p>Guess what letter I'm thinking of:</p><br>" + "<p>Wins: " + wins + "</p><br>" +
     "<p>Losses: " + losses + "</p><br>" +
     "<p>Guesses Left: " + guessesLeft + "</p><br>" + "<p>" + "You Guessed so far: " + lettersGuessed.toString() + "</p><br>";
