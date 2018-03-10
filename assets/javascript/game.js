@@ -30,7 +30,7 @@ document.onkeyup = function (e) {
     }
     if (guessesLeft === 0) {
         computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
-        alert("You lost!  I was thinking of the letter: " + computerGuess);
+        alert("You lost!");
         guessesLeft = 9;
         losses++;
         lettersGuessed = [];
